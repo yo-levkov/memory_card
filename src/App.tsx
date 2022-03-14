@@ -1,12 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
+import top from './assets/top.svg';
+import bottom from './assets/bottom.svg';
 import './App.css';
+import './index.css';
 
 function App() {
-  return (
+  return (/*
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Rick and Morty Memory Card Game</h1>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -19,7 +23,33 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div>*/
+
+    <section className="memory-game">
+      <div className = 'memory-card'>
+        <img className="front-face" src={top} />
+        <img className="back-face" src={bottom} />
+      </div>
+      <div className = 'memory-card'>
+        <img className="front-face" src={top} />
+        <img className="back-face" src={bottom} />
+      </div>
+      <div className = 'memory-card'>
+        <img className="front-face" src={top} />
+        <img className="back-face" src={bottom} />
+      </div>
+      <div className = 'memory-card'>        
+        <img className="front-face" src={top} />
+        <img className="back-face" src={bottom} />
+      </div>
+
+    </section>
+
+
+
+
+
+
   );
 }
 
