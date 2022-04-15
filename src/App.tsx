@@ -1,5 +1,6 @@
 import React, {FC, useState} from 'react';
 import {Card} from "./components/Card";
+import {Board} from "./components/Board";
 import './App.css';
 import './index.css';
 
@@ -30,10 +31,20 @@ export const App: FC<{ name: string }> = ({name}) => {
    setCount(prevState => prevState + 1);
   }
 
+ 
+  let cardCount = 4;
+
+
+  let b = new Array(cardCount).fill(null).map((_, index) => index + 1)
+
   return (
-    <section className="memory-game">
-      <Card img1={top} img2={bottom} onClick={handleCardClick} count={count} />
-    </section>
+  <Board count={cardCount}>
+
+  {b.map((b) => {
+     return <Card img1={top} img2={bottom} onClick={handleCardClick} count={count} />;
+  })}
+  </Board>
+   
   );
 }
 
